@@ -33,16 +33,16 @@
                 <div class="content">
                     <div>
 						<h2>Lokesh Daiya<h2>
-						
+
 						<h4>I develop Web app,mobile app, software application.</h4>
-						
+
 						<h4>I do automations using powershell and c#</h4>
 						<ul>
 						<li>
 						Over 4 years of sound experience in software development with a variety of projects and environments
 						</li>
 						<li>
-						Good understanding of Object Oriented Programming concepts and optimized code implementation. 
+						Good understanding of Object Oriented Programming concepts and optimized code implementation.
 						</li>
 						<li>
 						Involved in the design, development and execution of a project with given functionalities, Ability to understand the functional requirements.
@@ -83,7 +83,7 @@
                     </div>
                 </div>
             </div>
-        </div><!-- ./experience -->		
+        </div><!-- ./experience -->
 		        <div class="section white-bg">
             <div class="section-content  fadeInUp">
                 <div class="title">
@@ -100,7 +100,7 @@
                             </div>
                         </div>
                     </div>
-					
+
                 </div>
             </div>
         </div><!-- ./skillset -->
@@ -116,7 +116,7 @@
                         <div class="small">{{school.passYear}}</div>
                         <h2>{{school.school}}</h2>
                         <p>{{school.stream}}</p>
-						</br></br>	
+						</br></br>
                     </div>
                 </div>
             </div>
@@ -132,10 +132,10 @@
                 <div class="content">
                     <div>
                         <div class="dual-col img-col" ng-repeat="work in resume.works.websites">
-                            <a target="_blank" href="{{work.website}}"><img src="images/{{work.image}}"></a>
+                            <a target="_blank" href="{{work.website}}"><img ng-if="work.image" ng-src="images/{{work.image}}"></a>
                             <a target="_blank" href="{{work.website}}"><h2>{{work.comapny}}</h2></a>
                             <div class="tag" ng-repeat="tag in work.tags">{{tag.name}}</div>
-                            
+
                         </div>
 						<div class="dual-col" ng-repeat="work in resume.works.nonwebsites">
                             <a target="_blank" href="{{work.website}}"><h2>{{work.comapny}}</h2></a>
@@ -143,7 +143,7 @@
                             <div class="tag" ng-repeat="tag in work.tags">{{tag.name}}</div>
 							<p></p>
                         </div>
-						
+
                     </div>
                 </div>
             </div>
@@ -171,7 +171,7 @@ var app=angular.module("app",[]);
 app.controller("profileCtrl",function($scope){
 	var profile={
 				about:{
-				
+
 				},
 				companies:[
                           {name:"FISGlobal",startYear:"March 2017",endYear:"Present",website:"",role:"Senior Product Development Engineer"},
@@ -198,9 +198,12 @@ app.controller("profileCtrl",function($scope){
 						websites:[
 									{comapny:"SOTV",website:"http://sotv.me",image:"sotv.png",tags:[{name:"Html5"},{name:"Jquery"},{name:"CakePHP"}]},
 									{comapny:"pacificinfraworld",website:"",image:"pip.png",tags:[{name:"Html5"},{name:"Jquery"},{name:"PHP"}]},
+									{comapny:"Skip the white",website:"https://play.google.com/store/apps/details?id=io.loksa.skipthewhite",image:"",tags:[{name:"angular"},{name:"ionic"},{name:"typescript"}]},
+									{comapny:"My Quick Notes",website:"https://play.google.com/store/apps/details?id=io.loksa.myquicknotes",image:"",tags:[{name:"angular"},{name:"cordova"},{name:"typescript"}]},
+									{comapny:"SasstoCss",website:"http://sasstocss.herokuapp.com/",image:"",tags:[{name:"node-sass"},{name:"nodejs"},{name:"jquery"}]},
 								 ]
-				}				
-				
+				}
+
 	}
 	$scope.resume=profile;
 
